@@ -1,0 +1,50 @@
+exp_name: 'Experiments correlation type'
+
+#algo_names: ['CW', 'CW-SV', 'CW-EV-SV', 'CRB_unconditional', 'CRB_conditional']
+#algo_names: ['CW', 'CW-SV']
+#algo_names: ['CRB_unconditional', 'CRB_conditional']
+#algo_names: ['CW-SV', 'CW', 'CRB_unconditional']
+algo_names: ['CW-SV', 'CW', 'CRB_unconditional', 'CRB_conditional']
+#algo_names: ['CW-SV', 'CW-EV-SV', 'CW', 'CRB_unconditional', 'CRB_conditional']
+#algo_names: ['CRB_unconditional', 'CRB_conditional']
+num_mics_max:  2
+nstft: [8]
+#num_mics_max:  5
+#nstft: [8]
+#num_repeated_experiments: 1000
+
+avg_time_frames: True
+#metric_names: ['MSE dB']
+#metric_names: ['MSE dB', 'Hermitian angle']
+metric_names: ['RMSE dB', 'Hermitian angle']
+noverlap_percentage: 0.
+
+rtf_type: 'random-once-small'
+#rtf_type: 'random-small'
+#rtf_type: 'real'
+
+gen_signals_freq_domain: True
+flag_scree_method: False
+flag_mdl_criterion: False
+
+noises_info:
+   - names: ['white']
+     snr: [-5]
+
+add_identity_noise_noisy: False
+use_true_covariance: True
+
+perc_active_target_freq: 1.0
+
+correlation_noise: 0.25
+correlation_target: 0.25
+duration_output_frames: 1000
+
+correlation_target_type: 'frequency'
+correlation_noise_type: 'frequency'
+
+target_noise_equal_variances: True
+
+needs_warmup_run: True
+covariance_target_type: 'equicorrelated'
+covariance_noise_type: 'equicorrelated'

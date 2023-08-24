@@ -1,0 +1,32 @@
+exp_name: 'Experiments speech TSP2023'
+
+algo_names: ['CW-SV', 'CW']
+num_mics_max:  2
+nstft: [512]
+noverlap_percentage: 0.5
+duration_output_frames: 1500
+avg_time_frames: True
+num_repeated_experiments: 50
+metric_names: ['RMSE dB', 'Hermitian angle']
+
+desired: ['female']
+noises_info:
+   - names: ['male']
+     snr: [-5]
+     same_volume_all_mics: False
+     isDirectional: True
+   - names: [ 'white' ]
+     snr: [40]
+     same_volume_all_mics: True
+
+max_relative_difference_loud_bins: 35
+
+rtf_type: 'real'
+num_nonzero_samples_rir: 512
+rir_corpus: 'aachen'
+
+gen_signals_freq_domain: False
+use_true_covariance: False
+perc_active_target_freq: 1.0
+
+needs_warmup_run: False
