@@ -15,11 +15,10 @@ the effect of the early reflections on the signal. This is important for derever
 ### Preparation
 1. Open a terminal and navigate to the root of the project.
 2. Clone this repository with `git clone git@github.com:Screeen/SVD-direct.git` or download the zip file and extract it. 
-3. Execute `chmod +x scripts_bash/run_tsp2023` to make the script executable.
-4. Run `python3 -m venv env` to create a virtual environment.
-5. Activate the virtual environment with `source env/bin/activate`
-6. Install the required packages with `pip install -r requirements.txt`
-7. Run the unit tests with
+3. Run `python3 -m venv env` to create a virtual environment.
+4. Activate the virtual environment with `source env/bin/activate`
+5. Install the required packages with `pip install -r requirements.txt`
+6. Run the unit tests with
 ```
 cd src
 python3 acoustic_estimator_test.py
@@ -36,7 +35,9 @@ estimate_rtf_covariance_subtraction...
 
 ### Running the experiments
 8. We are now ready to run the experiments. First lets do a quick round to make sure everything works:
-``` 
+```
+cd ..
+chmod +x scripts_bash/run_tsp2023
 ./scripts_bash/run_tsp2023 1 equal
 ```
 Runs the **first experiment** ('equal variances') with *Montecarlo constant* 1 (which means very few Montecarlo iterations will be run).
