@@ -17,7 +17,7 @@ the effect of the early reflections on the signal. This is important for derever
 2. Clone this repository with `git clone git@github.com:Screeen/SVD-direct.git` or download the zip file and extract it. 
 3. Run `python3 -m venv env` to create a virtual environment.
 4. Activate the virtual environment with `source env/bin/activate`
-5. Install the required packages with `pip install -r requirements.txt`
+5. Install the required packages with `python3 -m pip install -r requirements.txt`
 6. Run the unit tests with
 ```
 cd src
