@@ -3,6 +3,8 @@
 This code accompanies the paper *Wideband channel estimation exploiting frequency correlations with applications in speech processing*.
 The paper is currently under review for the IEEE Transactions on Signal Processing.
 
+![plot](./pics/pic1.jpg)
+
 In short, the paper proposes a new method for estimating the acoustic transfer function (ATF) of a room.
 In multi-microphone beamforming, the ATF is used to not only estimate the direction-of-arrival of a source, but also
 the effect of the early reflections on the signal. This is important for dereverberation and noise reduction.
