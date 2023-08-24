@@ -6,24 +6,24 @@ echo "Running experiments with exp_constant = $exp_constant. Higher exp_constant
 if [ $# -ge 2 ]; then
     if [ "$2" = "equal" ]; then
       echo "Running with equal variances."
-      python -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
+      python3 -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
       --exp_name time_frames --repeated_experiments_constant "$exp_constant" --target_noise_equal_variances &
-      python -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
+      python3 -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
       --exp_name noise_correlation --repeated_experiments_constant "$exp_constant" --target_noise_equal_variances &
-      python -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
+      python3 -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
       --exp_name target_correlation --repeated_experiments_constant "$exp_constant" --target_noise_equal_variances &
-      python -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
+      python3 -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
       --exp_name snr --repeated_experiments_constant "$exp_constant" --target_noise_equal_variances
       echo "Running with equal variances."
   elif [ "$2" = "unequal" ]; then
       echo "Running with UNequal variances."
-      python -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
+      python3 -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
       --exp_name time_frames --repeated_experiments_constant "$exp_constant" --no-target_noise_equal_variances &
-      python -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
+      python3 -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
       --exp_name noise_correlation --repeated_experiments_constant "$exp_constant" --no-target_noise_equal_variances &
-      python -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
+      python3 -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
       --exp_name target_correlation --repeated_experiments_constant "$exp_constant" --no-target_noise_equal_variances &
-      python -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
+      python3 -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\)  \
       --exp_name snr --repeated_experiments_constant "$exp_constant" --no-target_noise_equal_variances
       echo "Running with UNequal variances."
     else

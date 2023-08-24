@@ -57,7 +57,7 @@ This will take around an hour to complete.
 12. Unfortunately, because the real data used in the paper is proprietary, we cannot share it here. But you can still run the code on your own data.
 In general, use this script to run the experiments:
 ```
-python -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\) --help
+python3 -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\) --help
 ```
 Which will give you this output:
 ```
@@ -75,7 +75,7 @@ optional arguments:
 
 So, for example, to run the experiments on speech you could use this command:
 ```
-python -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\) --exp_name speech_snr --repeated_experiments_constant 1 --use_multiple_processes True
+python3 -m scripts.2023-05\ experiments\ correlation\ \(TSP2023\) --exp_name speech_snr --repeated_experiments_constant 1 --use_multiple_processes True
 ```
 
 > [!NOTE]
