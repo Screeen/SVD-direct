@@ -4,10 +4,17 @@ This code accompanies the paper *Wideband channel estimation exploiting frequenc
 The paper is currently under review for the IEEE Transactions on Signal Processing.
 
 ![vowel in time, frequency, and bifrequency domains](./pics/pic1.jpg)
+*The /ä/ phoneme uttered by a male speaker. 
+The left plot depicts the waveform, while the center plot shows the power spectral density (PSD). 
+The peaks in the PSD are found at integer multiples of the fundamental frequency (harmonics).
+The right plot shows the spectral correlation or bifrequency spectrum. 
+The grid-like structure of peaks in the bifrequency spectrum, whose spacing is proportional to the fundamental frequency, indicates a correlation between frequency components*
 
 In short, the paper proposes a new method for estimating the acoustic transfer function (ATF) of a room.
-In multi-microphone beamforming, the ATF is used to not only estimate the direction-of-arrival of a source, but also
+In multi-microphone beamforming, the ATF is used not only to estimate the direction-of-arrival of a source, but also
 the effect of the early reflections on the signal. This is important for dereverberation and noise reduction.
+
+In the proposed algorithm, we exploit the correlation between frequency components of the signal to improve the ATF estimate.
 
 ## Installation and first run
 ### Prerequisites
