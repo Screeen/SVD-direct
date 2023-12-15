@@ -1,7 +1,7 @@
 # SVD-direct
 ## Introduction
-This code accompanies the paper *Wideband channel estimation exploiting frequency correlations with applications in speech processing*.
-The paper is currently under review for the IEEE Transactions on Signal Processing.
+This code accompanies the paper *Wideband Relative Transfer Function (RTF) Estimation Exploiting Frequency Correlations*.
+The paper is currently under review for the IEEE/ACM Transactions on Audio, Speech, and Language Processing (TALSP).
 
 ![vowel in time, frequency, and bifrequency domains](./pics/pic1.jpg)
 *The /ä/ phoneme uttered by a male speaker. 
