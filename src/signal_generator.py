@@ -263,6 +263,12 @@ class SignalGenerator:
             dry = self.generate_cosine(num_channels, length_samples, freq_hz=freqs_hz)
             dry = np.squeeze(dry)
 
+        elif sound_name == 'demo_target':
+            file_name = g.dataset_folder / 'target-speech.wav'
+            if 'demo_target' not in self.dry_samples_cache:
+                self.dry_samples_cache['demo_target'] = self.read_make_float_resample(file_name)
+            dry = self.get_mono_clip_random_offset(self.dry_samples_cache['demo_target'], length_samples)
+
         else:
             raise TypeError(f"invalid sound_name {sound_name}")
 

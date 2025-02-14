@@ -10,7 +10,6 @@ cycler==0.12.1
 decorator==5.1.1
 executing==2.2.0
 fonttools==4.56.0
-Gammatone @ https://github.com/detly/gammatone/archive/master.zip#sha256=a33b739c787152035646cf5c1910ae3ff5da556b6d1f8c9d27191a2495ad6612
 hfhd==0.1.4
 icecream==2.1.4
 idna==3.10
@@ -34,11 +33,9 @@ plotly==5.18.0
 pooch==1.8.2
 prettytable==3.14.0
 pycparser==2.22
-pydub==0.25.1
+pydub~=0.25.1
 Pygments==2.19.1
 pyparsing==3.2.1
-pysepm @ https://github.com/schmiph2/pysepm/archive/master.zip#sha256=d6de16b122892342ad765f8b33daac52ae16151e3da5a7200c5321df15b80c21
-pysepm-evo==0.1.1
 pystoi==0.3.3
 python-dateutil==2.9.0.post0
 pytz==2025.1

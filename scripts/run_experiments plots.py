@@ -33,7 +33,6 @@ if __name__ == '__main__':
 
         args.target_folder = os.path.join(parent_dir, folder_list[-1])  # get most recent folder
 
-        # args.target_folder = r'/Users/giovannibologni/Documents/TU Delft/out3/talsp2025/equal long'
         warnings.warn(f"Target folder for exporting Tex plots not specified. Using default: {args.target_folder}")
 
     # Here we only need an additional loop if args.target_folder contains multiple experiments.

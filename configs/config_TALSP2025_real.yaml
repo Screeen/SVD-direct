@@ -3,7 +3,7 @@ exp_name: 'Experiments speech TALSP2025'
 exp_common:
   speech_num_mics:
     varying_factors: [ 'num_mics_max' ]
-    num_mics_max: [ 2, 4, 6, 8 ]
+    num_mics_max: [ 2, 4, 6 ]  # real is [2,4,6,8]. This is for testing
 
   speech_nstft:
     varying_factors: [ 'nstft' ]
@@ -18,7 +18,9 @@ exp_common:
     varying_factors: [ 'noises_info', 0, 'snr' ]
     noises_info:
       [
-        { 'snr': [ -10, 0, 10, 20, 30, 40 ], 'names': [ 'esc-50-selected' ], 'same_volume_all_mics': False,
+        { 'snr': [ -10, 0, 10, 20, 30, 40 ],
+          'names': ['long_vowel'],  # [ 'esc-50-selected' ] is the correct one! 'long_vowel' is for testing
+          'same_volume_all_mics': False,
           'isDirectional': True },
         { 'snr': [ 40 ], 'names': [ 'white' ], 'same_volume_all_mics': True, 'isDirectional': False },
       ]
@@ -26,10 +28,9 @@ exp_common:
   speech_noise_position:
     varying_factors: ['rir_settings', 'noise_angle']
     rir_settings:
-#      noise_angle: [ 0, 15, 30, 45, 60, 75, 90 ]
       noise_angle: [ 0, 15, 30, 45, 60, 75, 90]
       rtf_type: 'real'
-      rir_corpus: 'hadad'
+      rir_corpus: 'pyroom' #'hadad' is the correct one! pyroom is for testing
       room_size: 'large'
       num_nonzero_samples_rir_target: 6100
       num_nonzero_samples_rir_noise: 6100
@@ -57,25 +58,21 @@ exp_common:
     varying_factors: [ 'noverlap_percentage' ]
     noverlap_percentage: [ 0.5, 0.75, 0.96875 ]
 
-#algo_names: ['CW-SV', 'CW']
 algo_names: ['CW-SV', 'CW-SV-orig-phase', 'CW']
 num_mics_max:  4
 nstft: [1024]
 noverlap_percentage: [0.75]
 avg_time_frames: True
 num_repeated_experiments: 1
-#duration_output_sec: 0.2
 duration_output_sec: 1
-#duration_output_sec: 0.48
 
-desired: ['male', 'female']
-#desired: ['male']
+desired: ['demo_target'] # real is ['male', 'female']. This is for testing
 
 noises_info:
     [
-#      { 'snr': [ 0 ], 'names': [ 'washing_machine_2' ], 'same_volume_all_mics': False, 'isDirectional': True },
-#      { 'snr': [ 0 ], 'names': [ 'babble' ], 'same_volume_all_mics': False, 'isDirectional': True },
-      { 'snr': [ 0 ], 'names': [ 'esc-50-selected' ], 'same_volume_all_mics': False, 'isDirectional': True },
+      { 'snr': [ 0 ],
+        'names': ['long_vowel'],  # [ 'esc-50-selected' ] is the correct one! 'long_vowel' is for testing
+        'same_volume_all_mics': False, 'isDirectional': True },
       { 'snr': [ 40 ], 'names': [ 'white' ], 'same_volume_all_mics': True, 'isDirectional': False },
     ]
 
@@ -83,8 +80,7 @@ max_relative_difference_loud_bins: 35
 
 rir_settings:
   rtf_type: 'real'
-  rir_corpus: 'hadad'
-#  rir_corpus: 'ace-lin8ch'
+  rir_corpus: 'pyroom' #'hadad' is the correct one! pyroom is for testing
   room_size: 'large'
   num_nonzero_samples_rir_target: 6100
   num_nonzero_samples_rir_noise: 6100
@@ -102,16 +98,8 @@ single_frame_phase_range_end: 0.5
 add_identity_noise_noisy: True
 
 rtf_metrics: ['Hermitian angle', 'RMSE dB']
-#rtf_metrics: ['RMSE dB']
 
 beamforming_algorithm: 'mvdr'
-#beamforming_algorithm: 'sdw_mwf'
-#beamforming_algorithm: 'sdw_mwf_r1'
-#beamforming_metrics: ['RMSE']
 beamforming_metrics: ['fwSNRseg', 'STOI', 'llr']
 
-#processed_freq_range_hz: [100, 3000]
-#processed_freq_range_hz: [80, 1500]
-#processed_freq_range_hz: [60, 1000]
 processed_freq_range_hz: [80, 2000]
-#processed_freq_range_hz: [80, 4000]

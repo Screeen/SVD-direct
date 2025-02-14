@@ -116,13 +116,9 @@ class RirManager:
 
         if rir_corpus == 'pyroom':
             if rir_type == 'noise':
-                # rir_path = "E:\\Documents\\TU Delft\\MSc\\Thesis\\code\\01" + self.diffuse_str + ".wav"
                 rir_path = g.dataset_folder / "Pyroom" / "1.wav"
-                # rir_path = g.dataset_folder / "Pyroom" / "1_big.wav"
             elif rir_type == 'target':
-                # rir_path = "E:\\Documents\\TU Delft\\MSc\\Thesis\\code\\00" + self.diffuse_str + ".wav"
                 rir_path = g.dataset_folder / "Pyroom" / "0.wav"
-                # rir_path = g.dataset_folder / "Pyroom" / "0_big.wav"
             else:
                 raise ValueError(f"Unknown rir_type {rir_type} cannot be loaded.")
             rir_samples = self.load_rir_from_path(rir_path)
@@ -165,7 +161,6 @@ class RirManager:
             """
             target: air_stairway_1_1_1_30_mls.wav and air_stairway_0_1_1_30_mls.wav
             noise: air_stairway_1_1_1_45_mls.wav and air_stairway_0_1_1_45_mls.wav
-            ~/Documents/TU Delft/Code/datasets/AIR_1_4/AIR_wav_files
             """
             aachen_folder = g.dataset_folder / "AIR_1_4" / "AIR_wav_files"
             if rir_type == 'noise':
@@ -308,4 +303,5 @@ class RirManager:
             """The ACE challenge — Corpus description and performance evaluation"""
             return 0.062
         else:
-            raise NotImplementedError(f"Inter-mic distance not implemented for {rir_corpus}")
+            warnings.warn(f"Inter-mic distance unknown for {rir_corpus}")
+            return 0.1
