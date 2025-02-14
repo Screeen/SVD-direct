@@ -1,0 +1,38 @@
+exp_name: 'Experiments synthetic data TALSP2025'
+
+algo_names: ['CW-SV', 'CW', 'CRB_unconditional', 'CRB_conditional']
+num_mics_max:  2
+nstft: [8]
+
+avg_time_frames: True
+rtf_metrics: ['RMSE dB', 'Hermitian angle']
+noverlap_percentage: 0.
+
+rir_settings:
+  rtf_type: 'random-once-small'
+
+gen_signals_freq_domain: True
+flag_scree_method: False
+flag_mdl_criterion: False
+
+noises_info:
+   - names: ['white']
+     snr: [-5]
+
+add_identity_noise_noisy: False
+use_true_noise_covariance: True
+
+perc_active_target_freq: 1.0
+
+correlation_noise: 0.25
+correlation_target: 0.25
+duration_output_frames: 1000
+
+correlation_target_type: 'frequency'
+correlation_noise_type: 'frequency'
+
+target_noise_equal_variances: True
+
+needs_warmup_run: True
+correlation_target_pattern: 'equicorrelated'
+correlation_noise_pattern: 'equicorrelated'

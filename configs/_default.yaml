@@ -1,0 +1,33 @@
+exp_name: 'Default configuration'
+algo_names: ['CS', 'CW', 'CS-bifreq', 'CW-EV']
+num_mics_max:  2
+avg_time_frames: True
+duration_output_sec: 5
+#duration_output_frames: 1000
+num_repeated_experiments: 1
+rtf_metrics: ['MSE dB', 'Hermitian angle']
+num_nonzero_samples_rir: 10000
+varying_factors: ['nstft']
+
+desired: ['white']
+noises_info:
+  - names: ['pink']
+    snr: 30
+    isDirectional: False
+    same_volume_all_mics: False
+
+  - names: ['female']
+    snr: 0
+    isDirectional: False
+    same_volume_all_mics: False
+
+nstft: 256
+noverlap_percentage: 0.5
+correlation_target: [0.]
+correlation_noise: [0.]
+limit_correlation_synthetic_covariances: False
+oracle_correlation_and_labelling: False
+generate_synthetic_covariances: False
+rtf_type: 'random'
+generate_single_frame_many_realizations: False
+single_frame_sound_name: 'white_noise'

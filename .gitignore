@@ -1,0 +1,10 @@
+.idea/
+.ipynb_checkpoints/
+Datasets/
+*.png
+*.pyc
+__pycache__/
+out/
+venv/
+.DS_Store
+*.m4a
