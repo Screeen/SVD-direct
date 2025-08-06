@@ -1,7 +1,10 @@
 # SVD-direct
 ## Introduction
 This code accompanies the paper *Wideband Relative Transfer Function (RTF) Estimation Exploiting Frequency Correlations*,
-published in the IEEE Transactions on Audio, Speech and Language Processing (TASLP) in 2025 (https://ieeexplore.ieee.org/document/10852350)
+published in the IEEE Transactions on Audio, Speech and Language Processing (TASLP) in 2025. 
+
+IEEE Xplore: https://ieeexplore.ieee.org/document/10852350
+ArXiv: https://arxiv.org/abs/2407.14152
 
 ![Waveform, spectrum and bifrequency spectrum of a vowel recording.](pics/pic1.jpg)
 
